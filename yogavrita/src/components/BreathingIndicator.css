@@ -1,0 +1,96 @@
+.breathing-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.breathing-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 32px rgba(102, 126, 234, 0.4);
+  position: relative;
+}
+
+.breathing-circle.breathing {
+  animation: breathe infinite ease-in-out;
+}
+
+.breathing-circle.holding {
+  animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes breathe {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+.breathing-text {
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.breathing-instructions {
+  display: flex;
+  gap: 3rem;
+  margin-top: 2rem;
+  font-size: 1rem;
+  color: #666;
+}
+
+.inhale-text,
+.exhale-text {
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.inhale-text {
+  color: #4a90a4;
+}
+
+.exhale-text {
+  color: #764ba2;
+}
+
+@media (max-width: 768px) {
+  .breathing-circle {
+    width: 120px;
+    height: 120px;
+  }
+
+  .breathing-text {
+    font-size: 1rem;
+  }
+
+  .breathing-instructions {
+    gap: 2rem;
+    font-size: 0.9rem;
+  }
+}

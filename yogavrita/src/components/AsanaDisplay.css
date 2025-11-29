@@ -1,0 +1,63 @@
+.asana-display {
+  text-align: center;
+  padding: 2rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.asana-name {
+  color: #2c5f7c;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.asana-instructions {
+  color: #666;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.timer-display {
+  margin-top: 2rem;
+}
+
+.time-remaining {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #4a90a4;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.1em;
+}
+
+.time-label {
+  font-size: 1rem;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .asana-display {
+    padding: 1.5rem;
+  }
+
+  .asana-name {
+    font-size: 1.5rem;
+  }
+
+  .asana-instructions {
+    font-size: 1rem;
+  }
+
+  .time-remaining {
+    font-size: 3rem;
+  }
+}
